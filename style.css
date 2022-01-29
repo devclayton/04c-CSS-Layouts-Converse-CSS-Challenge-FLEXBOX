@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* border: 4px solid #2c2c2c; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Practice using CLASSES to style elements rather than ELEMENT selectors
+(and don't use ID# selectors */
+
+.product {
+  border: 4px solid black;
+  /* padding: 6px; */
+  width: 825px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.title {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #dddddd;
+  color: #1d1d1d;
+  padding: 4px 0;
+  /* margin-bottom: 10px; */
+}
+
+/* Product Information */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.shipping {
+  text-transform: uppercase;
+  color: #969696;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* style links always list all 4 states in order LVHA */
+/* here link and visited are same style */
+.more-info:link,
+.more-info:visited {
+  color: black;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+/* apply same style to hover and active states */
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+  color: black;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.details-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  list-style: square;
+  line-height: 1.5;
+}
+
+.details-list li {
+  margin-bottom: 8px;
+}
+
+.add-cart {
+  background-color: #000;
+  color: #fff;
+  /* border: 2px solid #000; */
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  /* border-radius: 1.5px; */
+  width: 100%;
+  /* padding: 2px; */
+}
+/* add hover pseudo-class to .add-cart style */
+.add-cart:hover {
+  background-color: #fff;
+  color: #000;
+  /* border: 2px solid #000; */
+  /* padding: 2px; */
+}
+
+.sale {
+  background-color: #ff2600;
+  /* width: 80px; */
+  display: inline-block; /* better way to set width */
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*POSITIONING (Out-of-flow)*/
+  position: absolute; /*must also set parent container (.product) to relative */
+  top: -20px;
+  left: -35px;
+}
+
+.color {
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+}
+
+.color-red {
+  background-color: #ec2f2f;
+}
+.color-blue {
+  background-color: #2224b2;
+}
+.color-yellow {
+  background-color: #f0bf1e;
+}
+.color-green {
+  background-color: #0bff02;
+}
+.color-brown {
+  background-color: #8a4c06;
+}
+
+/*FLEXBOX*/
+.row {
+  display: flex;
+  gap: 30px;
+}
+
+.info-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*vertically align items in header */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.colors {
+  display: flex;
+  gap: 12px;
+}
+
+.info {
+  flex: 1;
+}
+
+.details {
+  flex: 1;
+}
